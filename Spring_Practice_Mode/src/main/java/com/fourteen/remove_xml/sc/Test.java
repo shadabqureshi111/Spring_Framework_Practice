@@ -12,6 +12,7 @@ public class Test {
 	ApplicationContext cxt=new AnnotationConfigApplicationContext
 							(Java_Configuration.class);	
 	
+	
 	/*1)When we gave "@Component("st") in Student.Class then 
 	   we should give "st" in getBean
 	  2) If you Defined Class in Java_Configuration and Use "Bean" Tag then 
