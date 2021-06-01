@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ https://www.springframework.org/schema/context
+ https://www.springframework.org/schema/context/spring-context.xsd">
+<!--  xmlns:context="http://www.springframework.org/schema/context" -->
+
+
+<!--With Value tag  -->
+			<!-- <bean class="springcore.one.demo.StudentStudent" name="student1">
+					<property name="s_id">
+						<value>101</value>
+					</property>
+					<property name="s_name">
+						<value>Shadab Qureshi</value>
+					</property>
+					<property name="s_address">
+						<value>Gwalior</value>
+					</property>
+			     </bean> -->
+	
+<!--With Value Attribute  -->
+			 <!-- <bean class="springcore.one.demo.StudentStudent" name="student1">
+			       <property name="s_id" value="101"/>
+			       <property name="s_name" value="Shadab Qureshi"/>
+			       <property name="s_address" value="Gwalior"/>
+			 </bean> -->
+ 
+ <!--With the use of P:Schema  -->
+ 			<bean class="springcore.one.demo.Student" name="student1"
+ 			 p:s_id="1011" p:s_name="Shadab Qureshi"	p:s_address="Gwalior"/>
+ 
+
+
+</beans>

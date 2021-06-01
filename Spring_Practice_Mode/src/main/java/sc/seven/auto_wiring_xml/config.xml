@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ https://www.springframework.org/schema/context
+ https://www.springframework.org/schema/context/spring-context.xsd">
+
+<!-- Create Simple Bean -->
+<!-- <bean class="sc.seven.auto_wiring_xml.Adress" name="adress" 
+	              p:city="Gwalior" p:state="M.P" />
+
+     <bean class="sc.seven.auto_wiring_xml.Emp" name="emp" 
+	              p:emp_id="101" p:adress-ref="adrs" /> -->
+	              
+	              
+<!-- 
+		1)When We want to use reference Bean then we will use 
+		                                   "autowire="give" Attribute
+		2)There Are Multiple type of autowire Mode
+			                               (|)byName (||)byType (|||) constructor
+		(|) when we use "byName" mode then we give bean name as same as the 
+		                    class Reference="Emp.java(private Adress "adress";) "
+		(||) when we use "byType" mode then Bean Fetch class in Reference Bean-
+		                    Reference type ="Emp.java(private "Adress" adress;)"
+-->
+<!-- Use "byName" Mode -->
+<!-- <bean class="sc.seven.auto_wiring_xml.Adress" name="adress" 
+	              p:city="Gwalior" p:state="M.P" />
+
+           <bean class="seven.auto_wiring_xml.sc.Emp" name="emp" p:emp_id="11" 
+	             autowire="byName"/> -->
+<!-- Use "byType" Mode -->
+		<bean class="sc.seven.auto_wiring_xml.Adress" name="adress" 
+	              p:city="Gwalior" p:state="M.P" />
+
+           <bean class="sc.seven.auto_wiring_xml.Emp" name="emp" p:emp_id="12" 
+	             autowire="byType"/>
+</beans>
